@@ -24,22 +24,14 @@ window.location="view-source:"+window.location
   <body>
 
     <div class="col-sm-8 col-sm-offset-2">
+            <div><h1 class="cover-heading">I'm Diego Roque.<span class="pull-right"><img src="yo.jpg" class="img-circle" width=150></span></h1></div>
 
-            <h1 class="cover-heading">I'm Diego Roque.</h1><hr>
-            <p class="lead">I'm the best ranked Mexican at the <a target="_blank" href="http://imo-official.org/country_hall.aspx?code=MEX&column=awards&order=desc&gender=hide&nameform=western">International Mathematics Olympiad</a> and <a target="_blank" href="http://stats.ioinformatics.org/halloffame/MEX">International Mathematics Olympiad</a>. I'm one of the fifteen-ish individuals that has <a target="_blank" href="www.quora.com/Who-has-won-a-gold-medal-at-more-than-one-Science-Olympiad">won a gold medal at more than one Science Olympiad</a>. Here is a partial laundry list of achievements:
-<ul class="lead">
-  <li>Gold on the International Olympiad in Informatics</li>
-  <li>Gold on the International Mathematical Olympiad</li>
-  <li>Gold on the Asian Pacific Mathematics Olympiad</li>
-  <li>Gold on the Iberoamerican Informatics Competence by Correspondence</li>
-  <li>Gold on the Iberoamerican Mathematics Olympiad</li>
-  <li>Gold on the Mexican Mathematics Olympiad</li>
-  <li>Gold on the Mexican Informatics Olympiad</li>
-</ul>
+<hr>
+            <p class="lead">I'm the best ranked Mexican at the <a target="_blank" href="http://imo-official.org/country_hall.aspx?code=MEX&column=awards&order=desc&gender=hide&nameform=western">International Mathematics Olympiad</a> and <a target="_blank" href="http://stats.ioinformatics.org/halloffame/MEX">International Mathematics Olympiad</a>. I'm one of the fifteen-ish individuals that has <a target="_blank" href="www.quora.com/Who-has-won-a-gold-medal-at-more-than-one-Science-Olympiad">won a gold medal at more than one Science Olympiad</a>. Here is my <a target="_blank" href="cv.pdf">CV</a>. 
 </p> <hr>
 
 <p class="lead">
-I pretend to have a <a target="_blank" href="http://blog.diegoroque.me">blog</a>. You can <a target="_blank" href="http://twitter.com/__gcd">tweet</a> at me. Or <a target="_blank" href="mailto:droque@mit.edu">email</a> me. Or be my <a target="_blank" href="https://www.facebook.com/diego627">friend</a>. My <a target="_blank" href="javascript:viewthesource()">number</a> is at the source code. Speaking of code, I code in:
+I pretend to have a <a target="_blank" href="http://blog.diegoroque.me">blog</a>. You can <a target="_blank" href="http://twitter.com/__gcd">tweet</a> at me. Or <a target="_blank" href="mailto:droque@mit.edu">email</a> me. Or <a target="_blkank" href="mailto:diego9627@gmail.com">gchat</a> with me. Or be my <a target="_blank" href="https://www.facebook.com/diego627">friend</a>. My <a target="_blank" href="javascript:viewthesource()">number</a> is at the source code. Speaking of code, I code in:
 <ul class="lead">
   <li>C/C++</li>
   <li>Haskell</li>
@@ -48,10 +40,11 @@ I pretend to have a <a target="_blank" href="http://blog.diegoroque.me">blog</a>
   <li>Lisp</li>
 </ul>
 </p><hr>
+<p class="lead">Currently I'm taking a one year leave from MIT. That means i'm currently building things.</p>
 <p class="lead"> 
-I'm currently building Ophiel, an educational platform for gifted kids and knowledge marketplace. That means I try to find intelligent kids and interesting content to teach said kids. 
+I'm a co-founder of Ophiel, an educational platform for gifted kids and knowledge marketplace. That means I try to find intelligent kids to teach to them interesting content and interesting content to teach them to intelligent kids. 
 <p><p class="lead">
-I'm also builing <a target="_blank" href="http://suingoftele.com">Suing Of Telecom</a>, a private consumer protection company that focuses on telecoms. That means I sue shitty ISPs on behalf of people.</p><hr>
+I'm also building <a target="_blank" href="http://suingoftele.com">Suing Of Telecom</a>, a private consumer protection company that focuses on telecoms. That means I sue shitty ISPs on behalf of people. It's also the first <a target="_blank" href="https://twitter.com/cblangille/lists/weird-sun-twitter">Weird Sun Twitter</a> company. I intend manage the PR of Suing Of Telecom explusively or mostly through GIFs and cryptic phrases.</p><hr>
 
     </div>
 
