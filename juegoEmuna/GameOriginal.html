@@ -1,0 +1,133 @@
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">module</span> <span style="color: #0e84b5; font-weight: bold">GameOriginal</span> exposing (<span style="color: #333333">..</span>)
+
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">Html</span> exposing (<span style="color: #333399; font-weight: bold">Html</span>, text)
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">Keyboard</span> exposing (<span style="color: #333399; font-weight: bold">KeyCode</span>)
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">AnimationFrame</span>
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">Time</span> exposing (<span style="color: #333399; font-weight: bold">Time</span>)
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">Key</span> exposing (<span style="color: #333333">..</span>)
+
+
+<span style="color: #0066BB; font-weight: bold">main</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Program</span> <span style="color: #333399; font-weight: bold">Never</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #333399; font-weight: bold">Msg</span>
+<span style="color: #0066BB; font-weight: bold">main</span> <span style="color: #000000; font-weight: bold">=</span>
+    <span style="color: #333399; font-weight: bold">Html</span><span style="color: #333333">.</span>program
+        { init <span style="color: #000000; font-weight: bold">=</span> init
+        , view <span style="color: #000000; font-weight: bold">=</span> view
+        , update <span style="color: #000000; font-weight: bold">=</span> update
+        , subscriptions <span style="color: #000000; font-weight: bold">=</span> subscriptions
+        }
+
+
+
+<span style="color: #888888">-- MODEL</span>
+
+
+<span style="color: #008800; font-weight: bold">type</span> alias <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">=</span>
+    { velocity <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Float</span>
+    , position <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Float</span>
+    , shotsFired <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Int</span>
+    }
+
+
+<span style="color: #0066BB; font-weight: bold">model</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">model</span> <span style="color: #000000; font-weight: bold">=</span>
+    { velocity <span style="color: #000000; font-weight: bold">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+    , position <span style="color: #000000; font-weight: bold">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+    , shotsFired <span style="color: #000000; font-weight: bold">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+    }
+
+
+<span style="color: #0066BB; font-weight: bold">init</span> <span style="color: #333399; font-weight: bold">:</span> ( <span style="color: #333399; font-weight: bold">Model</span>, <span style="color: #333399; font-weight: bold">Cmd</span> <span style="color: #333399; font-weight: bold">Msg</span> )
+<span style="color: #0066BB; font-weight: bold">init</span> <span style="color: #000000; font-weight: bold">=</span>
+    ( model, <span style="color: #333399; font-weight: bold">Cmd</span><span style="color: #333333">.</span>none )
+
+
+
+<span style="color: #888888">-- UPDATE</span>
+
+
+<span style="color: #008800; font-weight: bold">type</span> <span style="color: #333399; font-weight: bold">Msg</span>
+    <span style="color: #000000; font-weight: bold">=</span> <span style="color: #333399; font-weight: bold">TimeUpdate</span> <span style="color: #333399; font-weight: bold">Time</span>
+    <span style="color: #333333">|</span> <span style="color: #333399; font-weight: bold">KeyDown</span> <span style="color: #333399; font-weight: bold">KeyCode</span>
+    <span style="color: #333333">|</span> <span style="color: #333399; font-weight: bold">KeyUp</span> <span style="color: #333399; font-weight: bold">KeyCode</span>
+
+
+<span style="color: #0066BB; font-weight: bold">update</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Msg</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> ( <span style="color: #333399; font-weight: bold">Model</span>, <span style="color: #333399; font-weight: bold">Cmd</span> <span style="color: #333399; font-weight: bold">Msg</span> )
+<span style="color: #0066BB; font-weight: bold">update</span> msg model <span style="color: #000000; font-weight: bold">=</span>
+    <span style="color: #008800; font-weight: bold">case</span> msg <span style="color: #008800; font-weight: bold">of</span>
+        <span style="color: #333399; font-weight: bold">TimeUpdate</span> dt <span style="color: #000000; font-weight: bold">-&gt;</span>
+            ( applyPhysics dt model, <span style="color: #333399; font-weight: bold">Cmd</span><span style="color: #333333">.</span>none )
+
+        <span style="color: #333399; font-weight: bold">KeyDown</span> keyCode <span style="color: #000000; font-weight: bold">-&gt;</span>
+            ( keyDown keyCode model, <span style="color: #333399; font-weight: bold">Cmd</span><span style="color: #333333">.</span>none )
+
+        <span style="color: #333399; font-weight: bold">KeyUp</span> keyCode <span style="color: #000000; font-weight: bold">-&gt;</span>
+            ( keyUp keyCode model, <span style="color: #333399; font-weight: bold">Cmd</span><span style="color: #333333">.</span>none )
+
+
+<span style="color: #0066BB; font-weight: bold">keyDown</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">KeyCode</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">keyDown</span> keyCode model <span style="color: #000000; font-weight: bold">=</span>
+    <span style="color: #008800; font-weight: bold">case</span> <span style="color: #333399; font-weight: bold">Key</span><span style="color: #333333">.</span>fromCode keyCode <span style="color: #008800; font-weight: bold">of</span>
+        <span style="color: #333399; font-weight: bold">Space</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            incrementShotsFired model
+
+        <span style="color: #333399; font-weight: bold">ArrowLeft</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            updateVelocity <span style="color: #333333">-</span><span style="color: #6600EE; font-weight: bold">1.0</span> model
+
+        <span style="color: #333399; font-weight: bold">ArrowRight</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            updateVelocity <span style="color: #6600EE; font-weight: bold">1.0</span> model
+
+        <span style="color: #008800; font-weight: bold">_</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            model
+
+
+<span style="color: #0066BB; font-weight: bold">keyUp</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">KeyCode</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">keyUp</span> keyCode model <span style="color: #000000; font-weight: bold">=</span>
+    <span style="color: #008800; font-weight: bold">case</span> <span style="color: #333399; font-weight: bold">Key</span><span style="color: #333333">.</span>fromCode keyCode <span style="color: #008800; font-weight: bold">of</span>
+        <span style="color: #333399; font-weight: bold">ArrowLeft</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            updateVelocity <span style="color: #0000DD; font-weight: bold">0</span> model
+
+        <span style="color: #333399; font-weight: bold">ArrowRight</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            updateVelocity <span style="color: #0000DD; font-weight: bold">0</span> model
+
+        <span style="color: #008800; font-weight: bold">_</span> <span style="color: #000000; font-weight: bold">-&gt;</span>
+            model
+
+
+<span style="color: #0066BB; font-weight: bold">applyPhysics</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Float</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">applyPhysics</span> dt model <span style="color: #000000; font-weight: bold">=</span>
+    { model <span style="color: #333333">|</span> position <span style="color: #000000; font-weight: bold">=</span> model<span style="color: #333333">.</span>position <span style="color: #333333">+</span> model<span style="color: #333333">.</span>velocity <span style="color: #333333">*</span> dt }
+
+
+<span style="color: #0066BB; font-weight: bold">updateVelocity</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Float</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">updateVelocity</span> newVelocity model <span style="color: #000000; font-weight: bold">=</span>
+    { model <span style="color: #333333">|</span> velocity <span style="color: #000000; font-weight: bold">=</span> newVelocity }
+
+
+<span style="color: #0066BB; font-weight: bold">incrementShotsFired</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Model</span>
+<span style="color: #0066BB; font-weight: bold">incrementShotsFired</span> model <span style="color: #000000; font-weight: bold">=</span>
+    { model <span style="color: #333333">|</span> shotsFired <span style="color: #000000; font-weight: bold">=</span> model<span style="color: #333333">.</span>shotsFired <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span> }
+
+
+
+<span style="color: #888888">-- VIEW</span>
+
+
+<span style="color: #0066BB; font-weight: bold">view</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Html</span> msg
+<span style="color: #0066BB; font-weight: bold">view</span> model <span style="color: #000000; font-weight: bold">=</span>
+    text (toString model)
+
+
+
+<span style="color: #888888">-- SUBSCRIPTIONS</span>
+
+
+<span style="color: #0066BB; font-weight: bold">subscriptions</span> <span style="color: #333399; font-weight: bold">:</span> <span style="color: #333399; font-weight: bold">Model</span> <span style="color: #000000; font-weight: bold">-&gt;</span> <span style="color: #333399; font-weight: bold">Sub</span> <span style="color: #333399; font-weight: bold">Msg</span>
+<span style="color: #0066BB; font-weight: bold">subscriptions</span> model <span style="color: #000000; font-weight: bold">=</span>
+    <span style="color: #333399; font-weight: bold">Sub</span><span style="color: #333333">.</span>batch
+        [ <span style="color: #333399; font-weight: bold">AnimationFrame</span><span style="color: #333333">.</span>diffs <span style="color: #333399; font-weight: bold">TimeUpdate</span>
+        , <span style="color: #333399; font-weight: bold">Keyboard</span><span style="color: #333333">.</span>downs <span style="color: #333399; font-weight: bold">KeyDown</span>
+        , <span style="color: #333399; font-weight: bold">Keyboard</span><span style="color: #333333">.</span>ups <span style="color: #333399; font-weight: bold">KeyUp</span>
+        ]
+</pre></div>
+
+
