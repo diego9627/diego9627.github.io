@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/droque
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://diegoroque.me
+  * I am droque (https://keybase.io/droque) on keybase.
+  * I have a public key with fingerprint 038A 376F 27BD 505C 7C95  7E76 65E4 4D15 7C77 B3A0
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01206414467b49cde92be6deee951dc843d709a90b467651bf220ab62d4701a2bc230a",
+            "fingerprint": "038a376f27bd505c7c957e7665e44d157c77b3a0",
+            "host": "keybase.io",
+            "key_id": "65e44d157c77b3a0",
+            "kid": "010146a38f25f2834fa12584f9bc1339c75733fc8c0c586bed186a8bc9934540cd6d0a",
+            "uid": "ba8b5cef4d469ddf95e9065a37fa2019",
+            "username": "droque"
+        },
+        "service": {
+            "hostname": "diegoroque.me",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1497843015,
+    "expire_in": 157680000,
+    "prev": "802ac70cc6830daaccf95673af2bf190a474cc3f53c8e0cac9db27538c76f94d",
+    "seqno": 9,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.72
+Comment: https://keybase.io/crypto
+
+yMNuAnicbVJ9TFVlGL/gBScGhEAuFIGzgaLA3vN9zs1iZQ1tEQqJXYZcznnPe+Ak
+3HO591yQgGWGRh9KOWXhkiBqxmhQUFCuGSADB7stVMpAQeIjvoTQFhoyOpfFf73/
+vHuf5/f83t/veZ5O33UGHw80lhhcXNBc7dHbXuE0mBNeSCjCRFUqxExF2BG0eqEc
+CTk0yxFFwkwYwAnAUDhFMaxI8VBCPCEiRkII8TQuQY4iJRbwAg9EHcHQuCgTBBBE
+hpAoFuACIUKCBAIWg8mKNQvZbXbFqrlpSU4gWUYmWFGiAQ1ZyNMsYhmGRhQl4TQL
+WVYkBaAXZqsOd4UuThQcKE5R9Zj+sKzK+x/8mm6AU4xAcjJBywRHUrKAEzRHybwI
+cZLkIUuzJClDDgJIc4yIJJxjBE6EPE9SNAWgxEirup2rdKKeoiGSKYlieEmSeRrx
+gKF1D7JAAJx3Ax3IbhVykY6W7GqeE2ElMZgey1cgcrfV7WMtr6AsdRUTp79jMJtd
+1VSo5uipbE2zOUzuUq3Q5sYWINHyH4tFVKyS3ka9Ih/ZHYpqxUy4joSa4qbFKZ7V
+5wFwOgZDR22KHVkUN4JmGQ7ox/0PytcpOUAIkAUQMhwJJEGAUPfDsKQgE6KM80Cg
+WApCUqZJyCEABchLIsHSJAf1ifGUhLl95VlVzMTrMoUsndKhZFkFzWnXTXe0pxsN
+Hj4Gby9P93oZfDY8vrZ079z1X1ovZ0actVz5McrrjOtAxZ/muqXlxm1XA4JOHd6r
+Jn1Im47fqXu+1eMH75TabiDw1rqiqT8Sdz3KRm0TZT6jicScefpoa1JymiO+dfdc
+60eqdh40bt1n1kJ+ng0b2DNnPVFQGx21Ujmz4zM6JyVyXOq8tS7d4Eq1DQ3U8/YH
+cfHJt7elmpLDK5m+3E8DFy/w9ZWD0dC/K+ms7d2a/NPZXvULfl8taplNGNHTULGd
+qZ00tVU0Xd080LJr+NKdL64EBE7WhMzUH/rFY2z0+G/3ontd/sd69u/ZHlIVOxNU
+7Gj0erb0jf4l1/tG34f3Cw9Pv/r6Ctl7oyUK+C4Xz86e/+BWXMmvYSNdhcEt/Y9a
+abPfe6Xg0t08z+nkzX+3ex5cICzc9dFha1VaS01oQvrOiZVXysA3WwJts9dGtuYP
+vXzuGfa7+VFjdcVLfNfTS48FGnnvM0vScwffPJnROZjSt+lA5kV1Ib4ppNQCeiIj
+M0L7BgZv3gjqHj810VFuD58K7HDu/bJmi+tQCbX78tdV2sjvF5L6U/dv/Kmy+S+x
+/sknyk8ET2VexuVNn2x82zv85jKbcc54zXhyfvnFFda77OKO8X/UAPN82LFQ0W/x
+24i060l+ubG3g8DD1x64JpvLv19fVdkdVRP1ccPptg3Dnfffsj0V1HAvQNpZRaSP
+VQ9xcZ9b9w1GOGP/BSPmwP4=
+=4kuq
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/droque
+
+==================================================================
